@@ -1,3 +1,4 @@
+```mermaid
 flowchart TD
     A[Inicio] --> B[Registrar handler SIGINT]
     B --> C[Abrir y cargar eBPF skeleton]
@@ -29,3 +30,4 @@ flowchart TD
     style Z1 fill:#faa
     style Z2 fill:#faa
     style Z3 fill:#faa
+```
