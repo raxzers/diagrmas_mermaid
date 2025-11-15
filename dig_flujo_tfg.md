@@ -3,9 +3,9 @@ flowchart TD
     A[Inicio] --> B[Registrar handler SIGINT]
     B --> C[Abrir y cargar eBPF skeleton]
     C --> D[Adjuntar probes eBPF]
-    D -->  H[Crear perf buffer]
+    D -->  H[Crear ring buffer]
     H -->  J{Ejcución}
-    J --> K[perf_buffer__poll]
+    J --> K[ring_buffer__poll]
     K --> L{¿Evento recibido?}
     L -- Sí --> M[Actualizar estadísticas]
     M -->  O[Imprimir y guardar en CSV]
