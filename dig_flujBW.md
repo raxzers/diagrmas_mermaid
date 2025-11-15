@@ -4,9 +4,9 @@ flowchart TD
     B --> C[Abrir y cargar eBPF skeleton]
     C --> D[Adjuntar probes eBPF]
     D -->  G[Lanzar hilo stats_loop]
-    G --> H[Crear perf buffer]
+    G --> H[Crear ring buffer]
     H -->  J{Ejcución}
-    J --> K[perf_buffer__poll]
+    J --> K[ring_buffer__poll]
     K --> L{¿Evento recibido?}
     L -- Sí --> M[Actualizar estadísticas]
     L -- No --> J
